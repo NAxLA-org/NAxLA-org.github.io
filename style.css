@@ -1,0 +1,212 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #473722;
+    line-height: 1.6;
+    background-color: #f7f9fc;
+}
+
+/* Header */
+/* header {
+    background: linear-gradient(135deg, #246fa6, #dfd8c4);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+} */
+
+header {
+    padding: 20px;
+    background: linear-gradient(140deg, #fffefe, #fffefe);
+    border-bottom: 1px solid #ddd; /* Optionnel */
+    display: flex;
+    justify-content: center; /* Aligne tout à droite */
+    align-items: center; /* Aligne verticalement au centre */
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column; /* Empile le logo et le texte verticalement */
+    align-items: center; /* Aligne le contenu à droite */
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Empile logo et texte */
+    align-items: center; /* Centre le logo et le texte */
+    gap: 5px; /* Espacement entre logo et texte */
+}
+
+.logo-container img {
+    height: 200px; /* Taille fixe du logo */
+    width: auto; /* Conserve les proportions */
+    display: block; /* Supprime les espaces dus à l'élément inline */
+}
+
+.logo-container p {
+    margin: 0; /* Supprime toute marge par défaut */
+    font-size: 2em; /* Ajuste la taille du texte si nécessaire */
+    font-style: italic;
+    color: #473722;
+    text-align: center; /* Centre le texte sous le logo */
+}
+
+
+
+/* Navigation */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position:relative;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: #246fa6;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #246fa6;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::before {
+    transform: translateX(0); /* La ligne glisse sous le texte */
+}
+
+/* Main content */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    border-bottom: 2px solid #246fa6;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #246fa6;
+}
+
+/* Projects Section */
+#projects {
+    margin-bottom: 40px;
+}
+
+#projects .project-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#projects .project-item h3 {
+    margin-top: 0;
+    color: #246fa6;
+}
+
+#projects .project-item p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #473722;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}
